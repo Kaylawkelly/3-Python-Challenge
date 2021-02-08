@@ -15,8 +15,6 @@ total_months = []
 revenue = []
 average_revenue_change = []
 monthly_change = []
-    
-
 
 
 with open(csvpath, newline='') as csvfile:
