@@ -58,7 +58,7 @@ with open(csvpath, 'r', newline='') as csvfile:
 file = open(pathout,'w')
 
 
-file.write("Election Anaylsis")
+file.write("Election Anaylsis\n")
 file.write('------------------------------------'+'\n')
 file.write("\nTotal votes:" + str(totalVotes))
 file.write("\n-------------------------------------------")
