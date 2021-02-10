@@ -29,6 +29,7 @@ with open(csvpath, newline='') as csvfile:
         total_months.append(row[0])
         revenue.append(row[1])
     print(len(total_months))
+    
 #Total Revenue 
     revenue_int = map(int,revenue)
     total_revenue = (sum(revenue_int))
@@ -42,11 +43,9 @@ with open(csvpath, newline='') as csvfile:
 
         average_revenue_change.append(profit_loss)
     Total = sum(average_revenue_change)
-    #print(revenue_change)
     monthly_change = Total / len(average_revenue_change)
     print(monthly_change)
-    #print(Total)
-    
+   
 #Greatest Increase in Profits
     greatest_increase = max(average_revenue_change)
     print(greatest_increase)
@@ -61,7 +60,7 @@ with open(csvpath, newline='') as csvfile:
 
 
 print(f'Financial Analysis'+'\n')
-print(f'----------------------------'+'\n')
+print(f'------------------------------------'+'\n')
 print("Total Months: " + str(len(total_months)))
 print("Total: $ " + str(total_revenue))   
 print("Average Change: $" + str(monthly_change))
@@ -72,7 +71,7 @@ file = open(pathout,'w')
 
 
 file.write(f'Financial Analysis'+'\n')
-file.write(f'----------------------------'+'\n')
+file.write(f'--------------------------------'+'\n')
 file.write("Total Months: " + str(len(total_months)))
 file.write("Total: $ " + str(total_revenue)) 
 file.write("Average Change: $" + str(monthly_change))
