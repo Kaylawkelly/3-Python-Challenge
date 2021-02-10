@@ -53,7 +53,7 @@ with open(csvpath, newline='') as csvfile:
     j = average_revenue_change.index(greatest_increase)
     month_increase = total_months[j+1]
     
-#Greatest Decrease in Profice
+#Greatest Decrease in Profits
     greatest_decrease = min(average_revenue_change)
     print(greatest_decrease)
     x = average_revenue_change.index(greatest_decrease)
@@ -62,9 +62,9 @@ with open(csvpath, newline='') as csvfile:
 
 print(f'Financial Analysis'+'\n')
 print(f'----------------------------'+'\n')
-print("Total number of months: " + str(len(total_months)))
-print("Total Revenue in period: $ " + str(total_revenue))   
-print("Average monthly change in Revenue : $" + str(monthly_change))
+print("Total Months: " + str(len(total_months)))
+print("Total: $ " + str(total_revenue))   
+print("Average Change: $" + str(monthly_change))
 print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 
@@ -73,8 +73,8 @@ file = open(pathout,'w')
 
 file.write(f'Financial Analysis'+'\n')
 file.write(f'----------------------------'+'\n')
-file.write("Total number of months: " + str(len(total_months)))
-file.write("Total Revenue in period: $ " + str(total_revenue)) 
-file.write("Average monthly change in Revenue : $" + str(monthly_change))
+file.write("Total Months: " + str(len(total_months)))
+file.write("Total: $ " + str(total_revenue)) 
+file.write("Average Change: $" + str(monthly_change))
 file.write(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
 file.write(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
