@@ -18,6 +18,8 @@ votecount = []
 winnervotercount = 0
 
 
+
+
 with open(csvpath, 'r', newline='') as csvfile:        
     
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -35,10 +37,12 @@ with open(csvpath, 'r', newline='') as csvfile:
         candidateIndex = candidates.index(row[2])
         votecount[candidateIndex] += 1
 
+#Within
 
-    print(f"\nElection Results\n-------------------------------------------")
+    print('Election Results'+'\n')
+    print('------------------------------------'+'\n')
     print(f"Total votes: {totalVotes}")
-    print("-------------------------------------------")
+    print('------------------------------------'+'\n')
     
     for x in range(len(candidates)):
         votePercent = round((votecount[x]/totalVotes)*100,3)
@@ -47,15 +51,15 @@ with open(csvpath, 'r', newline='') as csvfile:
             winnervotercount = votecount[x]
             winner = candidates[x]
     
-    print("-------------------------------------------")
+    print('------------------------------------'+'\n')
     print(f"Winner: {winner}")
-    print("-------------------------------------------")
+    print('------------------------------------'+'\n')
 
 file = open(pathout,'w')
 
 
 file.write("Election Anaylsis")
-file.write("\n-------------------------------------------")
+file.write('------------------------------------'+'\n')
 file.write("\nTotal votes:" + str(totalVotes))
 file.write("\n-------------------------------------------")
     
